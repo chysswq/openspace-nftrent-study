@@ -7,7 +7,8 @@ import { projectId, metadata, chains } from '@/config/provider.config'
 
 
 const wagmiConfig = defaultWagmiConfig({ chains, projectId, metadata });
-createWeb3Modal({ wagmiConfig, projectId, themeMode: 'light' });
+createWeb3Modal({ wagmiConfig, projectId, 
+    themeMode: 'light' });
 
 export default function App({ children }: any) {
     return (
