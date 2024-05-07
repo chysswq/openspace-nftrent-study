@@ -14,12 +14,14 @@ contract TokenBank {
         erc20token = addr_;
     }
 
+   
     function withdraw(uint256 amount) public {
         IERC20(erc20token).transfer(msg.sender, amount);
         deposits[msg.sender] -= amount;
     }
 
     // 添加一个函数 permitDeposit 以支持离线签名授权（permit）进行存款
+
     function permitDeposit(
         address owner,
         address spender,
